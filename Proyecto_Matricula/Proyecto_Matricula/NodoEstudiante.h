@@ -3,17 +3,17 @@
 
 class NodoEstudiante {
 private:
-	NodoEstudiante* ptrEstu;
+	Estudiante* ptrEstu;
 	NodoEstudiante* ptrNodoEstu;
 public:
 	NodoEstudiante();
 	NodoEstudiante(Estudiante*, NodoEstudiante*);
 	~NodoEstudiante();
 
-	void setProfesor(Estudiante*);
-	void setSiguienteProfe(NodoEstudiante*);
+	void setEstudiante(Estudiante*);
+	void setSiguienteEstudiante(NodoEstudiante*);
 
 	Estudiante* getEstudiante();
-	NodoEstudiante* getSiguienteNodoEstudiante();
+	NodoEstudiante* getSiguienteEstudiante();
 
 };

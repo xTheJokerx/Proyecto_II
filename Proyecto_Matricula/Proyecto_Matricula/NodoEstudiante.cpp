@@ -1,11 +1,25 @@
 #include"NodoEstudiante.h"
 
-NodoEstudiante::NodoEstudiante() {}
-NodoEstudiante::NodoEstudiante(Estudiante*, NodoEstudiante*) {}
-NodoEstudiante::~NodoEstudiante() {}
+NodoEstudiante::NodoEstudiante() {
+	ptrEstu = NULL;
+	ptrNodoEstu = NULL;
+}
 
-void NodoEstudiante::setProfesor(Estudiante*) {}
-void NodoEstudiante::setSiguienteProfe(NodoEstudiante*) {}
+NodoEstudiante::NodoEstudiante(Estudiante* es, NodoEstudiante*nodEs) {
+	ptrEstu = es;
+	ptrNodoEstu = nodEs;
+}
 
-Estudiante* NodoEstudiante::getEstudiante() {}
-NodoEstudiante* NodoEstudiante::getSiguienteNodoEstudiante() {}
+NodoEstudiante::~NodoEstudiante() {} //ver como hacerlo
+
+
+
+void NodoEstudiante::setEstudiante(Estudiante* es) { ptrEstu = es; }
+
+void NodoEstudiante::setSiguienteEstudiante(NodoEstudiante* no) { ptrNodoEstu = no; }
+
+
+
+Estudiante* NodoEstudiante::getEstudiante() { return ptrEstu; }
+
+NodoEstudiante* NodoEstudiante::getSiguienteEstudiante() { return ptrNodoEstu; }

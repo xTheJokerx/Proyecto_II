@@ -11,7 +11,7 @@ public:
 	void setPpioProfe(NodoProfe*);
 
 	void IngresaProfesor(Profesor*);
-	void MuestraProfesor();
+	void MuestraProfesores();
 	void EliminaProfesor(Profesor*);
 
 };
