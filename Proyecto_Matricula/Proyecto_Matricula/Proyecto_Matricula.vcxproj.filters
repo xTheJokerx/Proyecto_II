@@ -33,10 +33,13 @@
     <ClInclude Include="NodoProfe.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="ConteneLProfe.h">
+    <ClInclude Include="NodoEstudiante.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="Grupo.h">
+    <ClInclude Include="ContenedorLProfe.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="ContenedorLEstudiante.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
   </ItemGroup>
@@ -62,7 +65,13 @@
     <ClCompile Include="Curso.cpp">
       <Filter>Archivos de código fuente</Filter>
     </ClCompile>
-    <ClCompile Include="Grupo.cpp">
+    <ClCompile Include="NodoEstudiante.cpp">
+      <Filter>Archivos de código fuente</Filter>
+    </ClCompile>
+    <ClCompile Include="ContenedorLProfe.cpp">
+      <Filter>Archivos de código fuente</Filter>
+    </ClCompile>
+    <ClCompile Include="ContenedorLEstudiantes.cpp">
       <Filter>Archivos de código fuente</Filter>
     </ClCompile>
   </ItemGroup>

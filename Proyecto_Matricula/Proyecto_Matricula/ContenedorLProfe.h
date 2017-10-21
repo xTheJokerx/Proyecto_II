@@ -3,7 +3,7 @@
 
 class ContenedorLProfe {
 private:
-	NodoProfe* ppio;
+	NodoProfe* ppioProfe;
 public:
 	ContenedorLProfe();
 	~ContenedorLProfe();
