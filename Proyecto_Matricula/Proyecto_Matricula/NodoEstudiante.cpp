@@ -8,4 +8,4 @@ void NodoEstudiante::setProfesor(Estudiante*) {}
 void NodoEstudiante::setSiguienteProfe(NodoEstudiante*) {}
 
 Estudiante* NodoEstudiante::getEstudiante() {}
-NodoEstudiante* NodoEstudiante::getNodoEstudiante() {}
+NodoEstudiante* NodoEstudiante::getSiguienteNodoEstudiante() {}

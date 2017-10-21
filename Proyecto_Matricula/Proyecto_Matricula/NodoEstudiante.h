@@ -14,6 +14,6 @@ public:
 	void setSiguienteProfe(NodoEstudiante*);
 
 	Estudiante* getEstudiante();
-	NodoEstudiante* getNodoEstudiante();
+	NodoEstudiante* getSiguienteNodoEstudiante();
 
 };

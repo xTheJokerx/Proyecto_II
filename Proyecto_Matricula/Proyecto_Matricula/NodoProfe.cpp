@@ -20,4 +20,4 @@ void NodoProfe::setSiguienteProfe(NodoProfe* nod) { ptrNodoProfe = nod; }
 
 Persona* NodoProfe::getProfesor() { return ptrpro; }
 
-NodoProfe* NodoProfe::getNodoProfe() { return ptrNodoProfe; }
+NodoProfe* NodoProfe::getSiguienteProfe() { return ptrNodoProfe; }

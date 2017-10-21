@@ -14,6 +14,6 @@ public:
 	void setSiguienteProfe(NodoProfe*);
 
 	Persona* getProfesor();
-	NodoProfe* getNodoProfe();
+	NodoProfe* getSiguienteProfe();
 
 };
