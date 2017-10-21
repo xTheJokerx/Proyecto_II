@@ -1,6 +1,9 @@
 #pragma once
 #include <iostream>
 #include <sstream>
+#pragma once
+#include <iostream>
+#include <sstream>
 #include <string>
 using namespace std;
 
@@ -15,5 +18,8 @@ public:
 	Curso(string, string);
 	~Curso();
 	string getNombreCurso();
-	string
+	string getCodigo();
+	ContenedorLGrupos* getContenedorGrupos();
+	void setNombreCurso(string);
+	void setCodigo(string);
 };
