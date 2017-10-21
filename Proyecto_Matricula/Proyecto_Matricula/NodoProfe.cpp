@@ -1,9 +1,23 @@
-#include<iostream>
-using namespace std;
-int main() {
-	cout << "te matare >;C" << endl;
-	cout << "cuidate ;D" << endl;
-	cout << "te vigilo cuando duermes" << endl;
-	system("pause");
-	return 0;
+#include"NodoProfe.h"
+
+NodoProfe::NodoProfe() {
+	ptrpro = NULL;
+	ptrNodoProfe = NULL;
 }
+
+NodoProfe::NodoProfe(Profesor* profe, NodoProfe* nod) {
+	ptrpro = profe;
+	ptrNodoProfe = nod;
+}
+
+NodoProfe::~NodoProfe() {} //depende si es necesario el objeto
+
+
+void NodoProfe::setProfesor(Profesor* profe) { ptrpro = profe; }
+
+void NodoProfe::setSiguienteProfe(NodoProfe* nod) { ptrNodoProfe = nod; }
+
+
+Persona* NodoProfe::getProfesor() { return ptrpro; }
+
+NodoProfe* NodoProfe::getNodoProfe() { return ptrNodoProfe; }
