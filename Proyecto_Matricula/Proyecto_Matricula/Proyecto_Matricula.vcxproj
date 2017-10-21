@@ -114,6 +114,7 @@
     <ClInclude Include="ConteneLProfe.h" />
     <ClInclude Include="Curso.h" />
     <ClInclude Include="Estudiante.h" />
+    <ClInclude Include="Grupo.h" />
     <ClInclude Include="Interfaz.h" />
     <ClInclude Include="NodoProfe.h" />
     <ClInclude Include="Persona.h" />
@@ -122,6 +123,7 @@
   <ItemGroup>
     <ClCompile Include="Curso.cpp" />
     <ClCompile Include="Estudiante.cpp" />
+    <ClCompile Include="Grupo.cpp" />
     <ClCompile Include="Interfaz.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="NodoProfe.cpp" />

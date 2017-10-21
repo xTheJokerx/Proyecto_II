@@ -24,10 +24,10 @@ void Interfaz::IngresaGrupo(){}
 void Interfaz::MuestraGrupo(){}
 void Interfaz::EliminaGrupo(){}
 
-static void MenuMatricula(){}
-static void MatricularEstudianteEnGrupo(){}
-static void RetirarCursoMatriculado(){}
-static void CambiosCursoMatriculado(){}
+void Interfaz::MenuMatricula(){}
+void Interfaz::MatricularEstudianteEnGrupo(){}
+void Interfaz::RetirarCursoMatriculado(){}
+void Interfaz::CambiosCursoMatriculado(){}
 
 void Interfaz::MenuListas(){}
 void Interfaz::ListadoEstudiantesEnSistema(){}

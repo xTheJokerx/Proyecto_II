@@ -1,8 +1,8 @@
 #include "Curso.h"
 
 Curso::Curso() {
-	nombreCurso = "NombreCurso_de_prueba";
-	codigo = "Codigo_de_prueba";
+	nombreCurso = "Nombre_del_curso";
+	codigo = "codigo_de_curso";
 }
 
 Curso::Curso(string nombreCurso, string codigo) {
