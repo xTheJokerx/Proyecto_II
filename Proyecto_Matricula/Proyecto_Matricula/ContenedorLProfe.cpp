@@ -12,8 +12,7 @@ void ContenedorLProfe::setPpioProfe(NodoProfe* nod) { ppioProfe = nod; }
 
 
 void ContenedorLProfe::IngresaProfesor(Profesor* pro) {
-	if(ppioProfe==NULL)
-
+	if (ppioProfe == NULL)
 }
 
 void ContenedorLProfe::MuestraProfesor() {}
