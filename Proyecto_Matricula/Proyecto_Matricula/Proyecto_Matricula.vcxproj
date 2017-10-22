@@ -114,6 +114,7 @@
     <ClInclude Include="ContenedorLEstudiante.h" />
     <ClInclude Include="ContenedorLGrupo.h" />
     <ClInclude Include="ContenedorLProfe.h" />
+    <ClInclude Include="Controladora.h" />
     <ClInclude Include="Curso.h" />
     <ClInclude Include="Estudiante.h" />
     <ClInclude Include="Fecha.h" />
@@ -131,6 +132,7 @@
     <ClCompile Include="ContenedorLEstudiantes.cpp" />
     <ClCompile Include="ContenedorLGrupo.cpp" />
     <ClCompile Include="ContenedorLProfe.cpp" />
+    <ClCompile Include="Controladora.cpp" />
     <ClCompile Include="Curso.cpp" />
     <ClCompile Include="Estudiante.cpp" />
     <ClCompile Include="Fecha.cpp" />

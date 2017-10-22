@@ -42,4 +42,5 @@ void ContenedorLEstudiante::EliminaEstudiante(Estudiante* estu) {
 		}
 		else
 			pex = pex->getSiguienteEstudiante();
+	}
 }
