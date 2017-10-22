@@ -61,7 +61,7 @@ int Interfaz::MenuEstudiantes(){
 		IngresaEstudiante();
 		break;
 	case 2:
-		MuestraEstudiante();
+		MuestraEstudiantes();
 		break;
 	case 3:
 		EliminaEstudiante();
@@ -75,7 +75,7 @@ int Interfaz::MenuEstudiantes(){
 void Interfaz::IngresaEstudiante(){
 	cout << "Ha ingresado la opcion de ingresar estudiante." << endl;
 }
-void Interfaz::MuestraEstudiante(){
+void Interfaz::MuestraEstudiantes(){
 	cout << "Ha ingresado la opcion de mostrar estudiante." << endl;
 }
 void Interfaz::EliminaEstudiante(){
@@ -97,7 +97,7 @@ int Interfaz::MenuProfesores(){
 		IngresaProfesor();
 		break;
 	case 2:
-		MuestraProfesor();
+		MuestraProfesores();
 		break;
 	case 3:
 		EliminaProfesor();
@@ -111,7 +111,7 @@ int Interfaz::MenuProfesores(){
 void Interfaz::IngresaProfesor(){
 	cout << "Ha ingresado la opcion de ingresar profesor." << endl;
 }
-void Interfaz::MuestraProfesor(){
+void Interfaz::MuestraProfesores(){
 	cout << "Ha ingresado la opcion de mostrar profesor." << endl;
 }
 void Interfaz::EliminaProfesor(){
@@ -133,7 +133,7 @@ int Interfaz::MenuCursos(){
 		IngresaCurso();
 		break;
 	case 2:
-		MuestraCurso();
+		MuestraCursos();
 		break;
 	case 3:
 		EliminaCurso();
@@ -147,7 +147,7 @@ int Interfaz::MenuCursos(){
 void Interfaz::IngresaCurso(){
 	cout << "Ha ingresado la opcion de ingresar curso." << endl;
 }
-void Interfaz::MuestraCurso(){
+void Interfaz::MuestraCursos(){
 	cout << "Ha ingresado la opcion de mostrar curso." << endl;
 }
 void Interfaz::EliminaCurso(){
@@ -169,7 +169,7 @@ int Interfaz::MenuGrupos(){
 		IngresaGrupo();
 		break;
 	case 2:
-		MuestraGrupo();
+		MuestraGrupos();
 		break;
 	case 3:
 		EliminaGrupo();
@@ -183,7 +183,7 @@ int Interfaz::MenuGrupos(){
 void Interfaz::IngresaGrupo(){
 	cout << "Ha ingresado la opcion de ingresar grupo." << endl;
 }
-void Interfaz::MuestraGrupo(){
+void Interfaz::MuestraGrupos(){
 	cout << "Ha ingresado la opcion de mostrar grupo." << endl;
 }
 void Interfaz::EliminaGrupo(){

@@ -29,7 +29,7 @@ void ContenedorLEstudiante::IngresaEstudiante(Estudiante* estu) {
 void ContenedorLEstudiante::MuestraEstudiantes() {
 	NodoEstudiante* pex = ppioEstu;
 	while (pex != NULL)
-		cout << pex->getEstudiante()->toString();
+		cout << pex->getEstudiante()->toString()<<endl;
 }
 
 void ContenedorLEstudiante::EliminaEstudiante(Estudiante* estu) {

@@ -1,14 +1,14 @@
 #pragma once
-#include <iostream>
-#include <sstream>
-#include <string>
+#include<iostream>
+#include<sstream>
+#include"ContenedorLGrupo.h"
 using namespace std;
 
 class Curso {
 private:
 	string nombreCurso;
 	string codigo;
-	ContenedorLGrupos* contLGrupos;
+	ContenedorLGrupo* contLGrupos;
 
 public:
 	Curso();
@@ -16,7 +16,7 @@ public:
 	~Curso();
 	string getNombreCurso();
 	string getCodigo();
-	//ContenedorLGrupos* getContenedorGrupos();
+	//ContenedorLGrupo* getContenedorGrupos();
 	void setNombreCurso(string);
 	void setCodigo(string);
 };

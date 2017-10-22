@@ -7,22 +7,22 @@ public:
 	
 	static int MenuEstudiantes();
 	static void IngresaEstudiante();
-	static void MuestraEstudiante();
+	static void MuestraEstudiantes();
 	static void EliminaEstudiante();
 	
 	static int MenuProfesores();
 	static void IngresaProfesor();
-	static void MuestraProfesor();
+	static void MuestraProfesores();
 	static void EliminaProfesor();
 	
 	static int MenuCursos();
 	static void IngresaCurso();
-	static void MuestraCurso();
+	static void MuestraCursos();
 	static void EliminaCurso();
 	
 	static int MenuGrupos();
 	static void IngresaGrupo();
-	static void MuestraGrupo();
+	static void MuestraGrupos();
 	static void EliminaGrupo();
 	
 	static int MenuMatricula();

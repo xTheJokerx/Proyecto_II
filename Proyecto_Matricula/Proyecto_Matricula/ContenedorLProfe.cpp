@@ -29,7 +29,7 @@ void ContenedorLProfe::IngresaProfesor(Profesor* pro) {
 void ContenedorLProfe::MuestraProfesores() { //ver si se puede quitar ese cout
 	NodoProfe* pex = ppioProfe;
 	while (pex != NULL)
-		cout << pex->getProfesor()->toString();
+		cout << pex->getProfesor()->toString() << endl;
 }
 
 void ContenedorLProfe::EliminaProfesor(Profesor* pro) {

@@ -12,6 +12,7 @@ Curso::Curso(string nombreCurso, string codigo) {
 
 Curso::~Curso() {
 	//No recuerdo cómo eliminar un contenedor tipo lista... :v
+	//te voy a matar. atte: Limpiaman
 }
 
 string Curso::getNombreCurso() { return nombreCurso; }

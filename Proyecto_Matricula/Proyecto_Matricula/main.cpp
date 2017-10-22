@@ -3,10 +3,10 @@
 #include "Interfaz.h"
 
 int main() {
-	int opcion;
-	Estudiante* est1 = new Estudiante();
-	Profesor* prof1 = new Profesor();
-	Interfaz::MenuPrincipal();
+	//int opcion;
+	//Estudiante* est1 = new Estudiante();
+	//Profesor* prof1 = new Profesor();
+	//Interfaz::MenuPrincipal();
 	
 	
 	/*do {
@@ -211,8 +211,8 @@ int main() {
 
 	} while (opcion != 7);*/
 
-	delete est1;
-	delete prof1;
+	//delete est1;
+	//delete prof1;
 
 	return 0;
 }
