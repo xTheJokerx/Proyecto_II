@@ -16,7 +16,7 @@ public:
 	~Curso();
 	string getNombreCurso();
 	string getCodigo();
-	//ContenedorLGrupo* getContenedorGrupos();
+	ContenedorLGrupo* getContenedorGrupos();
 	void setNombreCurso(string);
 	void setCodigo(string);
 };
