@@ -5,15 +5,15 @@ Grupo::Grupo(){
 	cupo = "";
 	aula = "";
 	profesor=NULL;
-	horario = NULL;
+	horario = new Horario;
 }
 
-Grupo::Grupo(string NRC, string cupo, string aula, Profesor* prof, Horario* horar){
+Grupo::Grupo(string NRC, string cupo, string aula, Profesor& prof, Horario& horar){
 	this->NRC = NRC;
 	this->cupo = cupo;
 	this->aula = aula;
-	profesor = prof;
-	horario = horar;
+	profesor = (Profesor*) &prof;
+	horario = (Horario*) &horar;
 }
 
 Grupo::~Grupo(){
@@ -40,3 +40,17 @@ void Grupo::setAula(string aula) { this->aula = aula; }
 void Grupo::setProfesor(Profesor& prof) { profesor = (Profesor*)&prof; }
 
 void Grupo::setHorario(Horario& horar) { horario = (Horario*)&horar; }
+
+string Grupo::toString() {
+	stringstream s;
+	s << "---DATOS DEL CURSO---" << endl;
+	s << "NRC: " << getNRC() << endl;
+	s << "Cupo: " << getCupo() << endl;
+	s << "Aula: " << getAula() << endl;
+	if (profesor != NULL)
+		s << "Profesor: " << getProfesor() << endl;
+	else
+		s << "Profesor por anunciar" << endl;
+	s << "Horario: " << getHorario() << endl;
+	return s.str();
+}

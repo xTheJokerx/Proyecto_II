@@ -1,8 +1,6 @@
 #pragma once
-#include <iostream>
-#include <sstream>
-#include <string>
 #include "Profesor.h"
+#include"Horario.h"
 using namespace std;
 
 class Grupo {
@@ -28,4 +26,5 @@ public:
 	void setProfesor(Profesor&);
 	void setHorario(Horario&);
 
+	string toString();
 };
