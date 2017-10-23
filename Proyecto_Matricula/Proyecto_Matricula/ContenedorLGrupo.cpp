@@ -28,10 +28,15 @@ void ContenedorLGrupo::IngresaGrupo(Grupo* gru) {
 }
 
 
-void ContenedorLGrupo::MuestraGrupos() { //puede ser un string
-	NodoGrupo* pex = ppioGrupo;
-	while (pex != NULL)
-		cout << pex->getGrupo()->toString() << endl;;
+string ContenedorLGrupo::toString() {
+	stringstream p;
+	NodoGrupo* pEx = ppioGrupo;
+	p << "------ LISTA DE GRUPOS -------" << endl;
+	while (pEx != NULL) {
+		p << pEx->getGrupo()->toString() << endl;
+		pEx = pEx->getSiguienteGrupo();
+	}
+	return p.str();
 }
 
 void ContenedorLGrupo::EliminaGrupo(Grupo* pro) {

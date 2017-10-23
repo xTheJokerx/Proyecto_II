@@ -11,25 +11,31 @@ NodoEstudiante* ContenedorLEstudiante::getPpioEstudiante() { return ppioEstu; }
 void ContenedorLEstudiante::setPpioEstudiante(NodoEstudiante* es) { ppioEstu = es; }
 
 
-
 void ContenedorLEstudiante::IngresaEstudiante(Estudiante* estu) {
 	if (ppioEstu == NULL)
-		ppioEstu = new NodoEstudiante(estu, NULL);
+		ppioEstu = new NodoEstudiante(estu, ppioEstu);
 
 	else {
-		NodoEstudiante* pex;
-		pex = ppioEstu;
-		while (pex->getSiguienteEstudiante() != NULL)
+		NodoEstudiante* pex=ppioEstu;
+		NodoEstudiante* aux = NULL;
+		while (pex != NULL) {
+			aux = pex;
 			pex = pex->getSiguienteEstudiante();
+		}
 		NodoEstudiante* nuevo = new NodoEstudiante(estu, NULL);
-		pex->setSiguienteEstudiante(nuevo);
+		aux->setSiguienteEstudiante(nuevo);
 	}
 }
 
-void ContenedorLEstudiante::MuestraEstudiantes() {
-	NodoEstudiante* pex = ppioEstu;
-	while (pex != NULL)
-		cout << pex->getEstudiante()->toString()<<endl;
+string ContenedorLEstudiante::toString() {
+	stringstream p;
+	NodoEstudiante* pEx = ppioEstu;
+	p << "------ LISTA DE ESTUDIANTES -------" << endl;
+	while (pEx != NULL) {
+		p << pEx->getEstudiante()->toString() << endl;
+		pEx = pEx->getSiguienteEstudiante();
+	}
+	return p.str();
 }
 
 void ContenedorLEstudiante::EliminaEstudiante(Estudiante* estu) {

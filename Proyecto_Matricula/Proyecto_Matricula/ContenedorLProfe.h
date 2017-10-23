@@ -14,4 +14,6 @@ public:
 	void MuestraProfesores();
 	void EliminaProfesor(Profesor*);
 
+	string toString();
+
 };

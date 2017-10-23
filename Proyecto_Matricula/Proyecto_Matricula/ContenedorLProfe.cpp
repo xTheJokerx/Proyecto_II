@@ -13,7 +13,7 @@ void ContenedorLProfe::setPpioProfe(NodoProfe* nod) { ppioProfe = nod; }
 
 void ContenedorLProfe::IngresaProfesor(Profesor* pro) {
 	if (ppioProfe == NULL)
-		ppioProfe = new NodoProfe(pro, NULL);
+		ppioProfe = new NodoProfe(pro, ppioProfe);
 
 	else {
 		NodoProfe* pex;
@@ -26,10 +26,15 @@ void ContenedorLProfe::IngresaProfesor(Profesor* pro) {
 
 }
 
-void ContenedorLProfe::MuestraProfesores() { //ver si se puede quitar ese cout
-	NodoProfe* pex = ppioProfe;
-	while (pex != NULL)
-		cout << pex->getProfesor()->toString() << endl;
+string ContenedorLProfe::toString() {
+	stringstream p;
+	NodoProfe* pEx = ppioProfe;
+	p << "------ LISTA DE PROFESORES -------" << endl;
+	while (pEx != NULL) {
+		p << pEx->getProfesor()->toString() << endl;
+		pEx = pEx->getSiguienteProfe();
+	}
+	return p.str();
 }
 
 void ContenedorLProfe::EliminaProfesor(Profesor* pro) {

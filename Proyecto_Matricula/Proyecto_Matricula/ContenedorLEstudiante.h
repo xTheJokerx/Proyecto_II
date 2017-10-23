@@ -11,7 +11,7 @@ public:
 	void setPpioEstudiante(NodoEstudiante*);
 
 	void IngresaEstudiante(Estudiante*);
-	void MuestraEstudiantes();
+	string toString();
 	void EliminaEstudiante(Estudiante*);
 
 };

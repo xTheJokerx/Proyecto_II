@@ -13,6 +13,7 @@ private:
 
 public:
 	Grupo();
+	Grupo(string, string, string);
 	Grupo(string, string, string, Profesor&, Horario&);
 	~Grupo();
 	string getNRC();

@@ -8,6 +8,12 @@ Grupo::Grupo(){
 	horario = new Horario;
 }
 
+Grupo::Grupo(string NRC, string cupo, string aula) {
+	this->NRC = NRC;
+	this->cupo = cupo;
+	this->aula = aula;
+}
+
 Grupo::Grupo(string NRC, string cupo, string aula, Profesor& prof, Horario& horar){
 	this->NRC = NRC;
 	this->cupo = cupo;
@@ -51,6 +57,9 @@ string Grupo::toString() {
 		s << "Profesor: " << getProfesor() << endl;
 	else
 		s << "Profesor por anunciar" << endl;
-	s << "Horario: " << getHorario() << endl;
+	if (horario != NULL)
+		s << "Horario: " << getHorario() << endl;
+	else
+		s << "Horario aun no definido" << endl;
 	return s.str();
 }

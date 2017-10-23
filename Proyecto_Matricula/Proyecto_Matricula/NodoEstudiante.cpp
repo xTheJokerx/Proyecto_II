@@ -10,16 +10,16 @@ NodoEstudiante::NodoEstudiante(Estudiante* es, NodoEstudiante*nodEs) {
 	ptrNodoEstu = nodEs;
 }
 
-NodoEstudiante::~NodoEstudiante() {} //ver como hacerlo
+NodoEstudiante::~NodoEstudiante() {
+	delete ptrEstu; //Duda...
+} 
 
+Estudiante* NodoEstudiante::getEstudiante() { return ptrEstu; }
 
+NodoEstudiante* NodoEstudiante::getSiguienteEstudiante() { return ptrNodoEstu; }
 
 void NodoEstudiante::setEstudiante(Estudiante* es) { ptrEstu = es; }
 
 void NodoEstudiante::setSiguienteEstudiante(NodoEstudiante* no) { ptrNodoEstu = no; }
 
 
-
-Estudiante* NodoEstudiante::getEstudiante() { return ptrEstu; }
-
-NodoEstudiante* NodoEstudiante::getSiguienteEstudiante() { return ptrNodoEstu; }

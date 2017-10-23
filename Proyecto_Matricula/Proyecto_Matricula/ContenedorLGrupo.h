@@ -12,6 +12,6 @@ public:
 
 
 	void IngresaGrupo(Grupo*);
-	void MuestraGrupos();
+	string toString();
 	void EliminaGrupo(Grupo*);
 };
