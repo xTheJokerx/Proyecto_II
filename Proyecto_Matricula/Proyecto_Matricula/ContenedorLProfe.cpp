@@ -4,7 +4,16 @@ ContenedorLProfe::ContenedorLProfe() {
 	ppioProfe = NULL;
 }
 
-ContenedorLProfe::~ContenedorLProfe() {} //ver como se define
+ContenedorLProfe::~ContenedorLProfe() {
+	NodoProfe *temp, *anterior;
+	temp = ppioProfe;
+	while (temp != NULL)
+	{
+		anterior = temp;
+		temp = temp->getSiguienteProfe();
+		delete anterior;
+	}
+}
 
 NodoProfe* ContenedorLProfe::getPpioProfe() { return ppioProfe; }
 
@@ -48,5 +57,36 @@ void ContenedorLProfe::EliminaProfesor(Profesor* pro) {
 		else
 			pex = pex->getSiguienteProfe();
 	}
+}
+
+void ContenedorLProfe::saveAll(ofstream& file) {
+	NodoProfe* pex = ppioProfe;
+	while (pex != NULL) {
+		pex->getProfesor()->save(file);
+		pex = pex->getSiguienteProfe();
+	}
+}
+
+void ContenedorLProfe::readAll(ifstream& file) {
+	//Objeto fantasma y puntero...
+	Profesor prof;
+	Profesor* ptrProf;
+
+	//Limpiando la lista...
+	NodoProfe *temp, *anterior;
+	temp = ppioProfe;
+	while (temp != NULL){
+		anterior = temp;
+		temp = temp->getSiguienteProfe();
+		delete anterior;
+	}
+
+	prof.read(file);			// Lectura previa... importante
+	while (!file.eof()) {
+		ptrProf = new Profesor(prof.getNombre(), prof.getCedula(), prof.getTelefono());
+		IngresaProfesor(ptrProf);
+		prof.read(file);		
+	}
+
 }
 

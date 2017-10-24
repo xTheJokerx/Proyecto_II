@@ -6,5 +6,7 @@ public:
 	Profesor();
 	Profesor(string, string, string);
 	~Profesor();
+	void save(ofstream&);
+	void read(ifstream&);
 	string toString();
 };

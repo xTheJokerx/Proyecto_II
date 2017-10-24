@@ -2,6 +2,7 @@
 #include <iostream>
 #include <sstream>
 #include <string>
+#include <fstream>
 using namespace std;
 
 class Persona {
@@ -11,6 +12,9 @@ protected:
 	string telefono;
 
 public:
+	Persona();
+	Persona(string, string,string);
+	~Persona();
 	virtual string getNombre();
 	virtual string getCedula();
 	virtual string getTelefono();
@@ -18,4 +22,6 @@ public:
 	virtual void setCedula(string);
 	virtual void setTelefono(string);
 	virtual string toString() = 0;
+	virtual void save(ofstream&) = 0;
+	virtual void read(ifstream&) = 0;
 };

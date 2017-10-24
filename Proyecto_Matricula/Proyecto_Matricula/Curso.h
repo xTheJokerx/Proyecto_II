@@ -19,4 +19,9 @@ public:
 	ContenedorLGrupo* getContenedorGrupos();
 	void setNombreCurso(string);
 	void setCodigo(string);
+
+	void save(ofstream&);
+	void read(ifstream&);
+
+	string toString();
 };

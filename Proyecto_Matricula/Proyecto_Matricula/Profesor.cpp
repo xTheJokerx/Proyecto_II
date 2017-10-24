@@ -14,6 +14,14 @@ Profesor::Profesor(string nombre, string cedula, string telefono) {
 
 Profesor::~Profesor(){}
 
+void Profesor::save(ofstream& archivo){
+	archivo << getNombre() << endl << getCedula() << endl << getTelefono() << endl;
+}
+
+void Profesor::read(ifstream& archivo){
+	archivo >> getNombre() >> getCedula() >> getTelefono();
+}
+
 string Profesor::toString() {
 	stringstream p;		
 	p << "Nombre: " << getNombre() << endl;		

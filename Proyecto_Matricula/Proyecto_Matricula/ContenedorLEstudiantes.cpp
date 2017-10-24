@@ -4,7 +4,16 @@ ContenedorLEstudiante::ContenedorLEstudiante() {
 	ppioEstu = NULL;
 }
 
-ContenedorLEstudiante::~ContenedorLEstudiante() {}//ver como hacerlo
+ContenedorLEstudiante::~ContenedorLEstudiante() {
+	NodoEstudiante *temp, *anterior;
+	temp = ppioEstu;
+	while (temp != NULL)
+	{
+		anterior = temp;
+		temp = temp->getSiguienteEstudiante();
+		delete anterior;
+	}
+}
 
 NodoEstudiante* ContenedorLEstudiante::getPpioEstudiante() { return ppioEstu; }
 
@@ -49,4 +58,35 @@ void ContenedorLEstudiante::EliminaEstudiante(Estudiante* estu) {
 		else
 			pex = pex->getSiguienteEstudiante();
 	}
+}
+
+void ContenedorLEstudiante::saveAll(ofstream& file) {
+	NodoEstudiante* pex = ppioEstu;
+	while (pex != NULL) {
+		pex->getEstudiante()->save(file);
+		pex = pex->getSiguienteEstudiante();
+	}
+}
+
+void ContenedorLEstudiante::readAll(ifstream& file) {
+	//Se crea un objeto fantasma y puntero...
+	Estudiante est;
+	Estudiante* ptrEst;
+
+	//Se limpia la lista...
+	NodoEstudiante *temp, *anterior;
+	temp = ppioEstu;
+	while (temp != NULL){
+		anterior = temp;
+		temp = temp->getSiguienteEstudiante();
+		delete anterior;
+	}
+
+	est.read(file);			// Lectura previa... importante
+	while (!file.eof()) {
+		ptrEst = new Estudiante(est.getNombre(), est.getCedula(), est.getTelefono());
+		IngresaEstudiante(ptrEst);
+		est.read(file);
+	}
+
 }

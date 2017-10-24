@@ -14,4 +14,7 @@ public:
 	void IngresaGrupo(Grupo*);
 	string toString();
 	void EliminaGrupo(Grupo*);
+
+	void saveAll(ofstream&);
+	void readAll(ifstream&);
 };

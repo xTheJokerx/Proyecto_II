@@ -24,3 +24,11 @@ ContenedorLGrupo* Curso::getContenedorGrupos() { return contLGrupos; }
 void Curso::setNombreCurso(string nombreCurso) { this->nombreCurso = nombreCurso; }
 
 void Curso::setCodigo(string codigo) { this->codigo = codigo; }
+
+void Curso::save(ofstream& archivo) {
+	archivo << getNombreCurso() << endl << getCodigo() << endl << getContenedorGrupos()->toString() << endl;
+}
+
+void Curso::read(ifstream& archivo) {
+	archivo >> getNombreCurso() >> getCodigo() >> getContenedorGrupos()->toString();
+}

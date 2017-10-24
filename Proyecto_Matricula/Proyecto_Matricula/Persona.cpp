@@ -1,5 +1,18 @@
 #include "Persona.h"
 
+Persona::Persona(){
+	nombre = "";
+	cedula = "";
+	telefono = "";
+}
+
+Persona::Persona(string nombre, string cedula, string telefono){
+	this->nombre=nombre;
+	this->cedula = cedula;
+	this->telefono = telefono;
+}
+Persona::~Persona(){}
+
 string Persona::getNombre() { return nombre; }
 
 string Persona::getCedula() { return cedula; }

@@ -11,12 +11,9 @@ public:
 	Tiempo();
 	Tiempo(int, int);
 	~Tiempo();
-
-	void setHora(int);
-	void setMinuto(int);
-
 	int getHora();
 	int getMinuto();
-
+	void setHora(int);
+	void setMinuto(int);
 	string toString();
 };

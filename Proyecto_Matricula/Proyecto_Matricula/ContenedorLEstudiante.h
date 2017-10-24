@@ -14,4 +14,7 @@ public:
 	string toString();
 	void EliminaEstudiante(Estudiante*);
 
+	void saveAll(ofstream&);
+	void readAll(ifstream&);
+
 };

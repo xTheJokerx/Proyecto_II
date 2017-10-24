@@ -16,4 +16,8 @@ public:
 
 	string toString();
 
+
+	void saveAll(ofstream&);
+	void readAll(ifstream&);
+
 };

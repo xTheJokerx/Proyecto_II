@@ -14,6 +14,14 @@ Estudiante::Estudiante(string nombre, string cedula, string telefono){
 
 Estudiante::~Estudiante(){}
 
+void Estudiante::save(ofstream& archivo) {
+	archivo << getNombre() << endl << getCedula() << endl << getTelefono() << endl;
+}
+
+void Estudiante::read(ifstream& archivo) {
+	archivo >> getNombre() >> getCedula() >> getTelefono();
+}
+
 string Estudiante::toString() {
 	stringstream p;
 	p << "Nombre: " << getNombre() << endl;

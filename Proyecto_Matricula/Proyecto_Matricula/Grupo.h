@@ -14,7 +14,7 @@ private:
 public:
 	Grupo();
 	Grupo(string, string, string);
-	Grupo(string, string, string, Profesor&, Horario&);
+	Grupo(string, string, string, Profesor*, Horario*);
 	~Grupo();
 	string getNRC();
 	string getCupo();
@@ -27,5 +27,8 @@ public:
 	void setProfesor(Profesor&);
 	void setHorario(Horario&);
 
+	void save(ofstream&);
+	void read(ifstream&);
+	
 	string toString();
 };

@@ -12,6 +12,9 @@ Horario::Horario(Fecha* fe, Tiempo* ti) {
 
 Horario::~Horario() {}
 
+Fecha* Horario::getFecha() { return ptrFecha; }
+Tiempo* Horario::getTiempo() { return ptrTiempo; }
+
 void Horario::setFecha(Fecha* f) { ptrFecha = f; }
 void Horario::setTiempo(Tiempo* t) { ptrTiempo = t; }
 

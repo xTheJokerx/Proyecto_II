@@ -10,6 +10,8 @@ public:
 	Horario();
 	Horario(Fecha*, Tiempo*);
 	~Horario();
+	Fecha* getFecha();
+	Tiempo* getTiempo();
 	void setFecha(Fecha*);
 	void setTiempo(Tiempo*);
 

@@ -12,21 +12,16 @@ Tiempo::Tiempo(int ho, int mi) {
 
 Tiempo::~Tiempo() {}
 
+int Tiempo::getHora() { return hora; }
 
+int Tiempo::getMinuto() { return minuto; }
 
 void Tiempo::setHora(int ho) { hora = ho; }
 
 void Tiempo::setMinuto(int mi) { minuto = mi; }
 
-
-int Tiempo::getHora() { return hora; }
-
-int Tiempo::getMinuto() { return minuto; }
-
-
 string Tiempo::toString() {
 	stringstream s;
-	s << "Hora: " << getHora() << endl;
-	s << "Minuto " << getMinuto() << endl;
+	s << getHora() << ":" << getMinuto() << endl;
 	return s.str();
 }

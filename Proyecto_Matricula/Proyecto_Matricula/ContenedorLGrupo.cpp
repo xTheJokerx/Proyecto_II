@@ -4,7 +4,16 @@ ContenedorLGrupo::ContenedorLGrupo() {
 	ppioGrupo = NULL;
 }
 
-ContenedorLGrupo::~ContenedorLGrupo() {} //ver como se define
+ContenedorLGrupo::~ContenedorLGrupo() {
+	NodoGrupo *temp, *anterior;
+	temp = ppioGrupo;
+	while (temp != NULL)
+	{
+		anterior = temp;
+		temp = temp->getSiguienteGrupo();
+		delete anterior;
+	}
+}
 
 NodoGrupo* ContenedorLGrupo::getPpioGrupo() { return ppioGrupo; }
 
@@ -53,3 +62,33 @@ void ContenedorLGrupo::EliminaGrupo(Grupo* pro) {
 
 }
 
+void ContenedorLGrupo::saveAll(ofstream& file) {
+	NodoGrupo* pex = ppioGrupo;
+	while (pex != NULL) {
+		pex->getGrupo()->save(file);
+		pex = pex->getSiguienteGrupo();
+	}
+}
+
+void ContenedorLGrupo::readAll(ifstream& file) {
+	//Se crea un objeto fantasma y puntero...
+	Grupo gr;
+	Grupo* ptrGrupo;
+
+	//Se limpia la lista...
+	NodoGrupo *temp, *anterior;
+	temp = ppioGrupo;
+	while (temp != NULL) {
+		anterior = temp;
+		temp = temp->getSiguienteGrupo();
+		delete anterior;
+	}
+
+	gr.read(file);			// Lectura previa... importante
+	while (!file.eof()) {
+		ptrGrupo = new Grupo(gr.getNRC(), gr.getCupo(), gr.getAula(), gr.getProfesor(), gr.getHorario());
+		IngresaGrupo(ptrGrupo);
+		gr.read(file);
+	}
+
+}
