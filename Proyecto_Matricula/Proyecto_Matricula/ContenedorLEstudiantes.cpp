@@ -36,6 +36,25 @@ void ContenedorLEstudiante::IngresaEstudiante(Estudiante* estu) {
 	}
 }
 
+void ContenedorLEstudiante::IngresaNUEVOEstudiante(string no, string ce, string te) {
+	if (ppioEstu == NULL) {
+		Estudiante* estu = new Estudiante(no, ce, te);
+		ppioEstu = new NodoEstudiante(estu, ppioEstu);
+	}
+
+	else {
+		NodoEstudiante* pex = ppioEstu;
+		NodoEstudiante* aux = NULL;
+		while (pex != NULL) {
+			aux = pex;
+			pex = pex->getSiguienteEstudiante();
+		}
+		Estudiante* estu = new Estudiante(no, ce, te);
+		NodoEstudiante* nuevo = new NodoEstudiante(estu, NULL);
+		aux->setSiguienteEstudiante(nuevo);
+	}
+}
+
 string ContenedorLEstudiante::toString() {
 	stringstream p;
 	NodoEstudiante* pEx = ppioEstu;
@@ -59,6 +78,18 @@ void ContenedorLEstudiante::EliminaEstudiante(Estudiante* estu) {
 			pex = pex->getSiguienteEstudiante();
 	}
 }
+
+string ContenedorLEstudiante::muestraUnEstudiantePorCedula(string ce){
+	stringstream s;
+	NodoEstudiante* pex = ppioEstu;
+	while (pex != NULL) {
+		if (pex->getEstudiante()->getCedula() == ce) {
+			s << pex->getEstudiante()->toString();
+			pex = pex->getSiguienteEstudiante();
+		}
+	}
+}
+
 
 void ContenedorLEstudiante::saveAll(ofstream& file) {
 	NodoEstudiante* pex = ppioEstu;
