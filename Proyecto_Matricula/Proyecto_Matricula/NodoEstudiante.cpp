@@ -11,6 +11,7 @@ NodoEstudiante::NodoEstudiante(Estudiante* es, NodoEstudiante*nodEs) {
 }
 
 NodoEstudiante::~NodoEstudiante() {
+	//ptrEstu->~Estudiante(); //aun no se
 	delete ptrEstu; //Duda...
 } 
 

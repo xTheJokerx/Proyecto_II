@@ -79,16 +79,37 @@ void ContenedorLEstudiante::EliminaEstudiante(Estudiante* estu) {
 	}
 }
 
+void ContenedorLEstudiante::EliminaEstudiantePorCedula(string cedu) {
+	NodoEstudiante* pex = ppioEstu;
+	while (pex != NULL) {
+		if (pex->getEstudiante()->getCedula() == cedu) {
+			NodoEstudiante* borrador = pex->getSiguienteEstudiante();
+			pex->setSiguienteEstudiante(borrador->getSiguienteEstudiante());
+			borrador->~NodoEstudiante();
+		}
+		else
+			pex = pex->getSiguienteEstudiante();
+	}
+}
+
 string ContenedorLEstudiante::muestraUnEstudiantePorCedula(string ce){
 	stringstream s;
 	NodoEstudiante* pex = ppioEstu;
 	while (pex != NULL) {
-		if (pex->getEstudiante()->getCedula() == ce) {
-			s << pex->getEstudiante()->toString();
+		if (pex->getEstudiante()->getCedula() != ce) {
 			pex = pex->getSiguienteEstudiante();
 		}
+		else {
+			s << pex->getEstudiante()->toString();
+			return s.str();
+		}
 	}
+	s << "El estudiante no esta registrado" << endl;
+	return s.str();
 }
+
+
+
 
 
 void ContenedorLEstudiante::saveAll(ofstream& file) {
@@ -121,3 +142,4 @@ void ContenedorLEstudiante::readAll(ifstream& file) {
 	}
 
 }
+

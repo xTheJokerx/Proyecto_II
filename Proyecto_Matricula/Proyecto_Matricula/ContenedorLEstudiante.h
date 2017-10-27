@@ -15,6 +15,7 @@ public:
 	void EliminaEstudiante(Estudiante*); 
 	void IngresaNUEVOEstudiante(string no, string ce, string te);
 	string muestraUnEstudiantePorCedula(string ce);
+	void EliminaEstudiantePorCedula(string cedu);
 
 	void saveAll(ofstream&);
 	void readAll(ifstream&);
