@@ -14,6 +14,8 @@ public:
 	void IngresaGrupo(Grupo*);
 	string toString();
 	void EliminaGrupo(Grupo*);
+	void IngresaGrupo(string, string, string, Profesor*);
+	void EliminaGrupo(string nrc);
 
 	void saveAll(ofstream&);
 	void readAll(ifstream&);

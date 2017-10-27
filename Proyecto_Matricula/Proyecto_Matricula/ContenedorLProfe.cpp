@@ -59,6 +59,55 @@ void ContenedorLProfe::EliminaProfesor(Profesor* pro) {
 	}
 }
 
+void ContenedorLProfe::IngresaNUEVOProfe(string no, string ce, string te) {
+	if (ppioProfe == NULL) {
+		Profesor* profe = new Profesor(no, ce, te);
+		ppioProfe = new NodoProfe(profe, ppioProfe);
+	}
+
+	else {
+		NodoProfe* pex = ppioProfe;
+		NodoProfe* aux = NULL;
+		while (pex != NULL) {
+			aux = pex;
+			pex = pex->getSiguienteProfe();
+		}
+		Profesor* profe = new Profesor(no, ce, te);
+		NodoProfe* nuevo = new NodoProfe(profe, NULL);
+		aux->setSiguienteProfe(nuevo);
+	}
+}
+
+void ContenedorLProfe::EliminaProfePorCedula(string cedu) {
+	NodoProfe* pex = ppioProfe;
+	while (pex != NULL) {
+		if (pex->getProfesor()->getCedula() == cedu) {
+			NodoProfe* borrador = pex->getSiguienteProfe();
+			pex->setSiguienteProfe(borrador->getSiguienteProfe());
+			borrador->~NodoProfe();
+		}
+		else
+			pex = pex->getSiguienteProfe();
+	}
+}
+
+string ContenedorLProfe::muestraUnProfePorCedula(string ce) {
+	stringstream s;
+	NodoProfe* pex = ppioProfe;
+	while (pex != NULL) {
+		if (pex->getProfesor()->getCedula() != ce) {
+			pex = pex->getSiguienteProfe();
+		}
+		else {
+			s << pex->getProfesor()->toString();
+			return s.str();
+		}
+	}
+	s << "El profesor no esta registrado" << endl;
+	return s.str();
+}
+
+
 void ContenedorLProfe::saveAll(ofstream& file) {
 	NodoProfe* pex = ppioProfe;
 	while (pex != NULL) {

@@ -13,6 +13,9 @@ public:
 	void IngresaProfesor(Profesor*);
 	void MuestraProfesores();
 	void EliminaProfesor(Profesor*);
+	void IngresaNUEVOProfe(string no, string ce, string te);
+	void EliminaProfePorCedula(string cedu);
+	string muestraUnProfePorCedula(string ce);
 
 	string toString();
 

@@ -36,6 +36,26 @@ void ContenedorLGrupo::IngresaGrupo(Grupo* gru) {
 
 }
 
+void ContenedorLGrupo::IngresaGrupo(string nrc,string cupo,string aula,Profesor* pro){
+	Horario* horari = new Horario;
+	if (ppioGrupo == NULL) {
+		Grupo* gru = new Grupo(nrc, cupo, aula, pro, horari);
+		ppioGrupo = new NodoGrupo(gru, ppioGrupo);
+	}
+
+	else {
+		NodoGrupo* pex = ppioGrupo;
+		NodoGrupo* aux = NULL;
+		while (pex != NULL) {
+			aux = pex;
+			pex = pex->getSiguienteGrupo();
+		}
+		Grupo* gru = new Grupo(nrc,cupo,aula,pro,horari);
+		NodoGrupo* nuevo = new NodoGrupo(gru, NULL);
+		aux->setSiguienteGrupo(nuevo);
+	}
+}
+
 
 string ContenedorLGrupo::toString() {
 	stringstream p;
@@ -60,6 +80,20 @@ void ContenedorLGrupo::EliminaGrupo(Grupo* pro) {
 			pex = pex->getSiguienteGrupo();
 	}
 
+}
+
+void ContenedorLGrupo::EliminaGrupo(string nrc){ //modificar los eliminadores 
+
+	NodoGrupo* pex = ppioGrupo;
+	while (pex != NULL) {
+		if (pex->getGrupo()->getNRC() == nrc) {
+			NodoGrupo* borrador = pex->getSiguienteGrupo();
+			pex->setSiguienteGrupo(borrador->getSiguienteGrupo());
+			borrador->~NodoGrupo();
+		}
+		else
+			pex = pex->getSiguienteGrupo();
+	}
 }
 
 void ContenedorLGrupo::saveAll(ofstream& file) {
