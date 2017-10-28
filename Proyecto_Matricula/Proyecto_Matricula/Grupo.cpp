@@ -37,6 +37,9 @@ Profesor* Grupo::getProfesor() { return profesor; }
 
 Horario* Grupo::getHorario() { return horario; }
 
+Curso* Grupo::getCurso() { return curso; }
+
+
 void Grupo::setNRC(string NRC) { this->NRC = NRC; }
 
 void Grupo::setCupo(string cupo) { this->cupo = cupo; }
@@ -47,17 +50,27 @@ void Grupo::setProfesor(Profesor& prof) { profesor = (Profesor*)&prof; }
 
 void Grupo::setHorario(Horario& horar) { horario = (Horario*)&horar; }
 
-void Grupo::save(ofstream& archivo) {
-	archivo << getNRC() << endl << getCupo() << endl << getAula() << endl
-		<< getProfesor()->getNombre() << endl << getProfesor()->getCedula() << endl
-		<< getProfesor()->getTelefono() << endl<< getHorario()->getFecha()->getDia() 
-		<< endl << getHorario()->getTiempo()->toString() << endl;
+void Grupo::setCurso(Curso& cur) { curso = (Curso*)&cur; }
+
+void Grupo::save(ofstream& archivo) {//duda aqui 
+	archivo << getNRC() << endl 
+		<< getCupo() << endl 
+		<< getAula() << endl
+		<< getProfesor()->getNombre() << endl 
+		<< getProfesor()->getCedula() << endl
+		<< getProfesor()->getTelefono() << endl
+		<< getHorario()->getFecha()->getDia() << endl 
+		<< getHorario()->getTiempo()->toString() << endl;
 }
 
-void Grupo::read(ifstream& archivo) {
-	archivo >> getNRC() >> getCupo() >> getAula() >> getProfesor()->getNombre()
-			>> getProfesor()->getCedula() >> getProfesor()->getTelefono()
-			>> getHorario()->toString();
+void Grupo::read(ifstream& archivo) { //duda aqui igual 
+	archivo >> getNRC(); 
+	archivo >> getCupo();
+	archivo >> getAula();
+	archivo >> getProfesor()->getNombre();
+	archivo >> getProfesor()->getCedula();
+	archivo >> getProfesor()->getTelefono();
+	archivo >> getHorario()->toString();
 }
 
 string Grupo::toString() {

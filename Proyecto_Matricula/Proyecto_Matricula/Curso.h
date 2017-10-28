@@ -8,15 +8,17 @@ class Curso {
 private:
 	string nombreCurso;
 	string codigo;
-	ContenedorLGrupo* contLGrupos;
+	//ContenedorLGrupo* contLGrupos;
 
 public:
 	Curso();
 	Curso(string, string);
 	~Curso();
+
 	string getNombreCurso();
 	string getCodigo();
-	ContenedorLGrupo* getContenedorGrupos();
+	//ContenedorLGrupo* getContenedorGrupos();
+
 	void setNombreCurso(string);
 	void setCodigo(string);
 

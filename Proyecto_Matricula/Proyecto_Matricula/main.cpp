@@ -156,7 +156,7 @@ do {
 } while (opcion != 4);
 
 
-cout << "probare mostrar todos los estudiantes " << endl;
+
 
 
 
