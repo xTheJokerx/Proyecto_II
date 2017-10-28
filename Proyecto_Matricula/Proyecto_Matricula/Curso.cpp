@@ -23,7 +23,7 @@ string Curso::getCodigo() { return codigo; }
 
 
 
-//ContenedorLGrupo* Curso::getContenedorGrupos() { return contLGrupos; }
+ContenedorLGrupo* Curso::getContenedorGrupos() { return contLGrupos; }
 
 void Curso::setNombreCurso(string nombreCurso) { this->nombreCurso = nombreCurso; }
 
