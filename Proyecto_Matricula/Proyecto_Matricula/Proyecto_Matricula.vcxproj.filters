@@ -58,6 +58,9 @@
     <ClCompile Include="ContenedorLFechas.cpp">
       <Filter>Archivos de código fuente</Filter>
     </ClCompile>
+    <ClCompile Include="Matricula.cpp">
+      <Filter>Archivos de código fuente</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ContenedorLEstudiante.h">
@@ -112,6 +115,9 @@
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
     <ClInclude Include="ContenedorLFechas.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="Matricula.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
   </ItemGroup>

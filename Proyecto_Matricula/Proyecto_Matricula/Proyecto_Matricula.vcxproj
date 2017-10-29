@@ -122,6 +122,7 @@
     <ClInclude Include="Grupo.h" />
     <ClInclude Include="Horario.h" />
     <ClInclude Include="Interfaz.h" />
+    <ClInclude Include="Matricula.h" />
     <ClInclude Include="NodoEstudiante.h" />
     <ClInclude Include="NodoFecha.h" />
     <ClInclude Include="NodoGrupo.h" />
@@ -143,6 +144,7 @@
     <ClCompile Include="Horario.cpp" />
     <ClCompile Include="Interfaz.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Matricula.cpp" />
     <ClCompile Include="NodoEstudiante.cpp" />
     <ClCompile Include="NodoFecha.cpp" />
     <ClCompile Include="NodoGrupo.cpp" />

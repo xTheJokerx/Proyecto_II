@@ -8,7 +8,7 @@ class Curso {
 private:
 	string nombreCurso;
 	string codigo;
-	//ContenedorLGrupo* contLGrupos;
+	ContenedorLGrupo* contLGrupos;
 
 public:
 	Curso();
