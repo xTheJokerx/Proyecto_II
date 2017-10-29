@@ -114,6 +114,7 @@
     <ClInclude Include="ContenedorLFechas.h" />
     <ClInclude Include="ContenedorLEstudiante.h" />
     <ClInclude Include="ContenedorLGrupo.h" />
+    <ClInclude Include="ContenedorLMatricula.h" />
     <ClInclude Include="ContenedorLProfe.h" />
     <ClInclude Include="Controladora.h" />
     <ClInclude Include="Curso.h" />
@@ -126,6 +127,7 @@
     <ClInclude Include="NodoEstudiante.h" />
     <ClInclude Include="NodoFecha.h" />
     <ClInclude Include="NodoGrupo.h" />
+    <ClInclude Include="NodoMatricula.h" />
     <ClInclude Include="NodoProfe.h" />
     <ClInclude Include="Persona.h" />
     <ClInclude Include="Profesor.h" />
@@ -135,6 +137,7 @@
     <ClCompile Include="ContenedorLEstudiantes.cpp" />
     <ClCompile Include="ContenedorLFechas.cpp" />
     <ClCompile Include="ContenedorLGrupo.cpp" />
+    <ClCompile Include="ContenedorLMatricula.cpp" />
     <ClCompile Include="ContenedorLProfe.cpp" />
     <ClCompile Include="Controladora.cpp" />
     <ClCompile Include="Curso.cpp" />
@@ -148,6 +151,7 @@
     <ClCompile Include="NodoEstudiante.cpp" />
     <ClCompile Include="NodoFecha.cpp" />
     <ClCompile Include="NodoGrupo.cpp" />
+    <ClCompile Include="NodoMatricula.cpp" />
     <ClCompile Include="NodoProfe.cpp" />
     <ClCompile Include="Persona.cpp" />
     <ClCompile Include="Profesor.cpp" />

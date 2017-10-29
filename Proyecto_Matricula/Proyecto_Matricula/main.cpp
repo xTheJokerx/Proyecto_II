@@ -124,44 +124,6 @@ conteprofe->~ContenedorLProfe();
 */
 
 
-
-do {
-	int opcion;
-	cout << "-------- BIENVENIDO AL MENU DE GRUPOS --------" << endl;
-	cout << "----------------------------------------------" << endl;
-	cout << "1) Ingresar un grupo. " << endl;
-	cout << "2) Mostrar un grupo.  " << endl;
-	cout << "3) Eliminar un grupo.  " << endl;
-	cout << "Digite el numero de la opcion que necesita: ";
-	cin >> opcion;
-
-	switch (opcion) {
-	case 1:
-		
-		break;
-
-	case 2:
-	
-		break;
-
-	case 3:
-		
-		break;
-
-	case 4: 
-		break;
-
-	
-
-} while (opcion != 4);
-
-
-
-
-
-
-
-
-	system("pause");
-	return 0;
+system("pause");
+return 0;
 }
